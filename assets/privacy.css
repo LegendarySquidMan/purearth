@@ -1,0 +1,49 @@
+/* Privacy controls share PUREARTH's cream, teal and Inter visual system. */
+.footer-inner nav { flex-wrap: wrap; align-items: center; }
+.privacy-banner { position: fixed; z-index: 30; inset: auto 24px 24px; max-width: 1120px; margin-inline: auto; padding: 22px 26px; background: var(--cream); color: var(--ink); border: 1px solid #d5cbbc; border-radius: 10px; box-shadow: 0 8px 36px #07131e40; }
+.privacy-banner h2, .privacy-dialog h2 { font-size: 23px; line-height: 1.3; letter-spacing: -.025em; margin: 0 0 9px; }
+.privacy-banner p, .privacy-dialog p { font-size: 14px; line-height: 1.7; margin: 0 0 17px; color: #33434b; }
+.privacy-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.privacy-button { min-height: 44px; padding: 11px 18px; background: var(--button); color: #fff; border: 1px solid var(--button); border-radius: 5px; font-size: 14px; line-height: 1.4; font-weight: 650; }
+.privacy-button:hover { background: #0a3648; }
+.privacy-banner a, .privacy-dialog a { color: var(--banner); font-size: 13px; font-weight: 550; }
+.privacy-later { background: transparent; border: 0; border-radius: 3px; color: var(--banner); font-size: 13px; padding: 10px 4px; text-decoration: underline; text-underline-offset: 4px; min-height: 44px; }
+.privacy-banner :focus-visible, .privacy-dialog :focus-visible { outline: 3px solid var(--banner); outline-offset: 3px; }
+.privacy-dialog { width: min(560px, calc(100% - 32px)); max-height: calc(100dvh - 40px); overflow-y: auto; margin: auto; padding: 30px; border: 1px solid var(--border); border-radius: 10px; background: var(--cream); color: var(--ink); box-shadow: 0 10px 42px #07131e50; }
+.privacy-dialog::backdrop { background: #07131e99; }
+.privacy-dialog-links { display: flex; align-items: center; justify-content: space-between; gap: 15px; flex-wrap: wrap; margin-top: 16px; }
+.privacy-choice-status { padding: 12px 15px; border-left: 3px solid var(--button); background: #e7e8de; color: #17313b !important; font-size: 14px !important; }
+.privacy-layout { margin-bottom: 50px; }
+.privacy-paper { max-width: 1040px; }
+.privacy-paper section { margin-top: 35px; scroll-margin-top: 25px; }
+.privacy-paper h2 { font-size: 25px; margin-bottom: 13px; }
+.privacy-paper li { font-size: 14px; line-height: 1.9; color: #33434b; }
+.privacy-updated { font-size: 12px !important; color: #505e66 !important; }
+.privacy-toc { display: flex; flex-wrap: wrap; gap: 10px 20px; margin: 25px 0; padding-block: 18px; border-block: 1px solid var(--border); font-size: 14px; }
+.privacy-table-wrap { overflow-x: auto; }
+.privacy-table { width: 100%; border-collapse: collapse; margin-block: 12px; font-size: 14px; line-height: 1.7; text-align: left; }
+.privacy-table caption { text-align: left; font-weight: 650; padding-block: 0 12px; }
+.privacy-table th, .privacy-table td { padding: 13px 14px; border: 1px solid #d5cec2; vertical-align: top; }
+.privacy-table thead { background: #e7e8de; }
+.privacy-table tbody th { width: 32%; overflow-wrap: anywhere; }
+@media (max-width: 620px) {
+  .footer-inner { flex-direction: column; justify-content: center; gap: 8px; padding-block: 12px; }
+  .footer-inner nav { justify-content: center; gap: 12px; }
+  .privacy-banner { inset: auto 12px 12px; padding: 18px; max-height: calc(100dvh - 24px); overflow-y: auto; }
+  .privacy-banner h2 { font-size: 21px; }
+  .privacy-banner p { font-size: 12px; line-height: 1.6; margin-bottom: 14px; }
+  .privacy-actions { gap: 10px; }
+  .privacy-actions .privacy-button { flex: 1 1 calc(50% - 5px); padding: 11px 9px; font-size: 12px; }
+  .privacy-actions a, .privacy-later { font-size: 12px; }
+  .privacy-dialog { padding: 23px; }
+  .privacy-dialog h2 { font-size: 22px; }
+  .privacy-paper h2 { font-size: 23px; }
+  .privacy-table th, .privacy-table td { padding: 11px 9px; font-size: 12px; }
+  .privacy-layout { margin-bottom: 30px; }
+}
+@media (max-width: 370px) {
+  .footer-inner nav { gap: 6px; font-size: 10.5px; }
+}
+@media print {
+  .privacy-banner, .privacy-dialog { display: none !important; }
+}

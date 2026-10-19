@@ -1,0 +1,62 @@
+/* Article-specific details. Shared layout is in article.css. */
+.title-line { display: block; }
+.article-hero h1 { max-width: 570px; }
+.method-options { margin: 24px 0; }
+.method-option { display: grid; grid-template-columns: 31px minmax(0, 1fr); gap: 15px; padding: 23px 0; border-top: 1px solid #d8dbd1; }
+.method-option:last-child { border-bottom: 1px solid #d8dbd1; }
+.method-number { font-size: 12px; font-weight: 600; color: var(--olive); padding-top: 4px; }
+.method-option p { font-size: 14px; line-height: 1.85; margin-bottom: 0; }
+.harvest-table-wrap { margin: 27px 0 21px; }
+.harvest-table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 13px; line-height: 1.85; }
+.harvest-table th, .harvest-table td { padding: 17px 12px; vertical-align: top; border-bottom: 1px solid #d8dbd1; text-align: left; overflow-wrap: anywhere; }
+.harvest-table thead th { color: var(--cream); background: var(--banner); font-size: 10px; letter-spacing: .015em; font-weight: 500; }
+.harvest-table th:first-child { width: 24%; padding-left: 15px; }
+.harvest-table tbody th { font-weight: 600; color: #17313b; background: #edf0e6; }
+.harvest-table td { width: 38%; }
+.recipe-facts { display: flex; flex-wrap: wrap; gap: 18px 35px; border-block: 1px solid #d8dbd1; padding-block: 15px; margin-block: 24px; font-size: 12px; }
+.recipe-facts strong { display: block; font-size: 10px; color: var(--olive); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 3px; }
+.tested-recipes { display: grid; grid-template-columns: 1fr; margin-block: 26px 20px; gap: 12px; }
+.tested-recipe { display: block; padding: 23px 25px; border: 1px solid #d5dacd; border-radius: 6px; background: #edf0e6; text-decoration: none; }
+.tested-recipe:hover { border-color: var(--olive); background: #e6ebdb; }
+.recipe-type { display: block; color: #526343; font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: .11em; margin-bottom: 8px; }
+.tested-recipe h3 { font-size: 18px; margin-bottom: 9px; }
+.tested-recipe p { font-size: 13px; line-height: 1.8; color: #394e58; margin-bottom: 13px; }
+.recipe-link { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 11px; font-weight: 600; color: var(--banner); }
+.recipe-link > span { font-size: 17px; }
+.batch-label { border: 1px dashed #9ba78d; padding: 21px 24px; margin-block: 23px; background: #edf0e6; border-radius: 5px; }
+.batch-label p { font-size: 12px; line-height: 1.9; margin-bottom: 0; }
+.batch-label .note-label { color: #526343; }
+.storage-list { padding-left: 20px; }
+.storage-list li { margin-bottom: 19px; font-size: 15px; }
+
+@media (max-width: 620px) {
+  .contents a { font-size: 12px; padding-left: 7px; min-height: 44px; display: flex; align-items: center; }
+  .harvest-table, .harvest-table tbody, .harvest-table tr, .harvest-table tbody th, .harvest-table td { display: block; width: 100%; }
+  .harvest-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }
+  .harvest-table tr { border: 1px solid #d8dbd1; border-radius: 5px; overflow: hidden; margin-bottom: 15px; }
+  .harvest-table tbody th:first-child { padding: 13px 16px; width: 100%; font-size: 14px; }
+  .harvest-table td { padding: 14px 16px; font-size: 13px; }
+  .harvest-table td:last-child { border-bottom: 0; }
+  .harvest-table td::before { display: block; font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: #526343; margin-bottom: 5px; }
+  .harvest-table td:first-of-type::before { content: 'A practical starting point'; }
+  .harvest-table td:last-of-type::before { content: 'What matters'; }
+  .method-option { gap: 9px; grid-template-columns: 25px minmax(0, 1fr); padding-block: 20px; }
+  .method-option p { font-size: 13px; }
+  .recipe-facts { font-size: 11px; gap: 14px; }
+  .recipe-facts > span { flex: 1 1 120px; }
+  .recipe-facts strong { font-size: 9px; }
+  .tested-recipe { padding: 20px 17px; }
+  .tested-recipe h3 { font-size: 17px; }
+  .tested-recipe p { font-size: 12px; }
+  .batch-label { padding: 20px 17px; }
+  .batch-label p { font-size: 11px; }
+  .storage-list li { font-size: 14px; }
+}
+
+@media print {
+  .method-option, .tested-recipe, .harvest-table tr, .batch-label { break-inside: avoid; }
+  .method-option p, .tested-recipe p, .harvest-table, .storage-list li { font-size: 10pt; }
+  .harvest-table thead th { background: #edf0e6; color: #17313b; }
+  .tested-recipe { background: white; }
+  .tested-recipe::after { content: attr(href); display: block; overflow-wrap: anywhere; color: #263942; font-size: 8pt; margin-top: 10px; }
+}
