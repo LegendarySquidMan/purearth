@@ -15,7 +15,7 @@
 .print-button { display: inline-flex; align-items: center; gap: 8px; padding: 10px 7px; color: var(--cream); border: 0; background: transparent; font-size: 12px; }
 .print-button:hover { text-decoration: underline; text-underline-offset: 4px; }
 .hero-figure { margin: 0; }
-.hero-figure img { width: 100%; aspect-ratio: 1.32; object-fit: cover; border: 1px solid var(--border); border-radius: var(--radius); }
+.hero-figure img { width: 100%; height: auto; border: 1px solid var(--border); border-radius: var(--radius); }
 .hero-figure figcaption { color: var(--cream); font-size: 10px; line-height: 1.7; margin-top: 10px; }
 .project-facts { display: grid; grid-template-columns: 1fr 1fr 1.3fr; gap: 20px; border-top: 1px solid #f7f3eb6b; border-bottom: 1px solid #f7f3eb6b; margin: 32px 0 0; padding-block: 19px; color: var(--cream); }
 .project-facts div + div { border-left: 1px solid #f7f3eb52; padding-left: 26px; }
@@ -106,7 +106,6 @@
   .article-hero h1 { font-size: 39px; }
   .article-deck { font-size: 15px; line-height: 1.8; }
   .article-hero .eyebrow { font-size: 9px; }
-  .hero-figure img { aspect-ratio: .95; }
   .project-facts { gap: 15px; }
   .project-facts div + div { padding-left: 15px; }
   .project-facts dd { font-size: 12px; }
@@ -127,7 +126,6 @@
   .article-hero-copy .eyebrow { font-size: 10px; margin-bottom: 13px; }
   .article-deck { font-size: 16px; line-height: 1.8; margin-bottom: 19px; }
   .article-byline { font-size: 11px; margin-bottom: 19px; }
-  .hero-figure img { aspect-ratio: 1.63; }
   .hero-figure figcaption { font-size: 9px; margin-top: 8px; }
   .project-facts { grid-template-columns: 1fr; padding-block: 18px; margin-top: 24px; gap: 14px; }
   .project-facts div { display: grid; grid-template-columns: 93px 1fr; align-items: start; gap: 14px; }
@@ -168,7 +166,6 @@
   .article-hero { padding-top: 0; }
   .article-hero-grid { display: block; }
   .hero-figure { max-width: 400px; margin-block: 20px; }
-  .hero-figure img { aspect-ratio: 1.8; }
   .hero-figure figcaption, .article-deck, .article-byline, .eyebrow, .project-facts { color: #263942; }
   .article-hero h1 { font-size: 34pt; }
   .article-deck { font-size: 12pt; max-width: none; }
