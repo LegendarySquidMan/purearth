@@ -34,17 +34,15 @@
       const query = input.value.trim().toLocaleLowerCase('en-CA');
       const words = query.split(/\s+/).filter(Boolean);
       let visible = 0;
-      let published = 0;
       for (const card of cards) {
         const matches = (category === 'all' || card.dataset.category === category) && words.every(word => card.dataset.search.includes(word));
         card.hidden = !matches;
         if (matches) {
           visible += 1;
-          if (card.dataset.published === 'true') published += 1;
         }
       }
       for (const button of filters) button.setAttribute('aria-pressed', String(button.dataset.filter === category));
-      counter.textContent = `${visible} ${visible === 1 ? 'article or idea' : 'articles and ideas'}${query ? ` matching “${input.value.trim()}”` : ''} · ${published} ready to read`;
+      counter.textContent = `${visible} ${visible === 1 ? 'article' : 'articles'}${query ? ` matching “${input.value.trim()}”` : ''}${visible ? ' · ready to read' : ''}`;
       document.querySelector('#no-results').hidden = visible !== 0;
       if (updateUrl) {
         const url = new URL(window.location.href);
